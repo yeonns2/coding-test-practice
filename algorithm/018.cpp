@@ -1,15 +1,17 @@
-#include<stdio.h>			
-int main(){
-	//freopen("input.txt", "rt", stdin);
-	int n, val, i, num, cnt=0, max=-2147000000;
-	scanf("%d %d", &n, &val);
-	for(i=1; i<=n; i++){
-		scanf("%d", &num);
-		if(num>val) cnt++;
-		else cnt=0;
-		if(cnt>max) max=cnt;
-	}
-	printf("%d\n", max);		
-	return 0;
+#include <stdio.h>
+
+int main() {
+    int n,m,i,x;
+    int max=-1, sec=0;
+    scanf("%d%d",&n,&m);
+    for(i=0;i<n;i++){
+        scanf("%d",&x);
+        if(x>m){
+            sec++;
+            if(sec>max)
+                max=sec;
+        }
+	else sec=0;      
+    }
+    printf("%d\n",max);
 }
-	
